@@ -1,0 +1,94 @@
+{
+  "name": "sunrise",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:debug": "node --inspect-brk node_modules/.bin/vue-cli-service test:unit --no-cache --watch --runInBand",
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
+    "start": "vue-cli-service serve",
+    "postinstall": "npm run copy-images-paydock && npm run copy-logo-paydock && npm run copy-images-powerboard && npm run copy-logo-powerboard",
+    "copy-images-paydock": "copyfiles -u 5 node_modules/@paydock-commercetools/paydock/dist/assets/icons/* public/images/paydock/",
+    "copy-images-powerboard": "copyfiles -u 5 node_modules/@power-board-commercetools/powerboard/dist/assets/icons/* public/images/powerboard",
+    "copy-logo-paydock": "copyfiles -u 5 node_modules/@paydock-commercetools/paydock/dist/assets/* public/images/paydock/",
+    "copy-logo-powerboard": "copyfiles -u 5 node_modules/@power-board-commercetools/powerboard/dist/assets/* public/images/powerboard"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.9.4",
+    "@fawmi/vue-google-maps": "^0.9.7",
+    "@paydock-commercetools/paydock": "2.0.76",
+    "@power-board-commercetools/powerboard": "2.0.76",
+    "@vue/apollo-composable": "^4.0.1",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "copyfiles": "^2.4.1",
+    "core-js": "^3.6.5",
+    "graphql": "^16.8.0",
+    "graphql-tag": "^2.12.6",
+    "isomorphic-fetch": "^3.0.0",
+    "js-base64": "^3.7.6",
+    "platform": "^1.3.6",
+    "vue": "^3.4.0",
+    "vue-i18n": "^9.9.1",
+    "vue-plugin-load-script": "^2.1.1",
+    "vue-router": "^4.2.5",
+    "vueperslides": "^3.5.1"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.11.1",
+    "@intlify/vue-i18n-loader": "^3.0.0",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-e2e-cypress": "^5.0.3",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-unit-jest": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "babel-eslint": "^10.1.0",
+    "cypress": "9.5.3",
+    "eslint": "7.32.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "mocha-junit-reporter": "^2.0.2",
+    "mocha-multi-reporters": "^1.5.1",
+    "msw": "^0.36.8",
+    "sass": "^1.49.7",
+    "sass-loader": "^10",
+    "typescript": "~3.9.3",
+    "vue-cli-plugin-i18n": "^0.6.1",
+    "vue-jest": "^5.0.0-0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

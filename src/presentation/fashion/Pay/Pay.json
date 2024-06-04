@@ -1,0 +1,14 @@
+{
+  "en": {
+    "continueShopping": "Continue Shopping",
+    "thankYou": "Thank you for your order!",
+    "thankYouOrderReceived": "Thank you. Your order has been received.",
+    "thankYouOrderProcessed": "Your order is being processed. We’ll get back to you shortly."
+  },
+  "de": {
+    "continueShopping": "Weiter einkaufen",
+    "thankYou": "Vielen Dank für Ihre Bestellung!",
+    "thankYouOrderReceived": "Thank you. Your order has been received.",
+    "thankYouOrderProcessed": "Your order is being processed. We’ll get back to you shortly."
+  }
+}
