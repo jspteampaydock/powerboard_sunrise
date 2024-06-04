@@ -33,7 +33,6 @@
       </div>
     </div>
 
-    <PaydockCheckout/>
     <PowerboardCheckout/>
 
   </span>
