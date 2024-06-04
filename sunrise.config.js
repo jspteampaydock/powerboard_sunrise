@@ -12,12 +12,12 @@ const config = {
   ct: {
     auth: {
       host: 'https://auth.europe-west1.gcp.commercetools.com',
-      projectKey: 'paydockecomm',
+      projectKey: 'powerboard',
       credentials: {
-        clientId: 'uKgzoXpkdctZy13P8rMeCs7x',
-        clientSecret: 'AmKsSTMvK85LbS51kkb07ZzIy5NcrrQb',
+        clientId: 'AxTwwzLy_RYWlKgEHxNQ4TYE',
+        clientSecret: '63gKIvx287CtVM_9yAnBlW7bLywyQHca',
       },
-      scope: 'manage_my_orders:paydockecomm create_anonymous_token:paydockecomm manage_my_shopping_lists:paydockecomm manage_customer_groups:paydockecomm view_products:paydockecomm manage_my_quotes:paydockecomm manage_connectors_deployments:paydockecomm manage_sessions:paydockecomm manage_my_quote_requests:paydockecomm manage_my_orders:paydockecomm:paydockecomm manage_discount_codes:paydockecomm manage_extensions:paydockecomm manage_orders:paydockecomm:paydockecomm manage_cart_discounts:paydockecomm:paydockecomm view_api_clients:paydockecomm manage_customers:paydockecomm:paydockecomm view_categories:paydockecomm manage_my_profile:paydockecomm:paydockecomm manage_cart_discounts:paydockecomm manage_my_business_units:paydockecomm view_published_products:paydockecomm manage_payments:paydockecomm manage_business_units:paydockecomm manage_shopping_lists:paydockecomm:paydockecomm manage_my_profile:paydockecomm manage_my_payments:paydockecomm manage_my_shopping_lists:paydockecomm:paydockecomm manage_attribute_groups:paydockecomm view_messages:paydockecomm manage_orders:paydockecomm manage_categories:paydockecomm manage_project:paydockecomm manage_order_edits:paydockecomm manage_api_clients:paydockecomm manage_customers:paydockecomm manage_checkout_payment_intents:paydockecomm manage_audit_log:paydockecomm manage_connectors:paydockecomm manage_associate_roles:paydockecomm manage_import_containers:paydockecomm manage_product_selections:paydockecomm view_product_selections:paydockecomm'
+      scope: 'view_messages:powerboard manage_sessions:powerboard manage_customers:powerboard:powerboard manage_business_units:powerboard manage_attribute_groups:powerboard manage_checkout_payment_intents:powerboard manage_categories:powerboard manage_connectors_deployments:powerboard manage_import_containers:powerboard manage_audit_log:powerboard manage_my_shopping_lists:powerboard:powerboard manage_associate_roles:powerboard manage_discount_codes:powerboard manage_orders:powerboard:powerboard manage_customers:powerboard manage_products:powerboard view_orders:powerboard manage_payments:powerboard manage_connectors:powerboard view_audit_log:powerboard manage_product_selections:powerboard manage_cart_discounts:powerboard manage_cart_discounts:powerboard:powerboard manage_project:powerboard manage_order_edits:powerboard manage_extensions:powerboard manage_customer_groups:powerboard manage_my_profile:powerboard:powerboard manage_shopping_lists:powerboard:powerboard manage_orders:powerboard manage_my_orders:powerboard:powerboard'
     },
     api:
         'https://api.europe-west1.gcp.commercetools.com',
