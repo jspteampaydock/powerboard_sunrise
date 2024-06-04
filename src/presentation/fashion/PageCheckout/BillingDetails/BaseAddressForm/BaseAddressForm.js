@@ -3,8 +3,8 @@ import BaseInput from 'presentation/components/BaseInput/BaseInput.vue';
 import { computed, watch, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import useBaseAddress from 'hooks/useBaseAddress';
-import fetch from 'isomorphic-fetch';
 import localMessages from './BaseAddressForm.json';
+import countryList from './CountryList.json';
 
 export default {
   props: {
@@ -45,11 +45,9 @@ export default {
   
     const fetchCountries = async () => {
       try {
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        const data = await response.json(); 
-        countries.value = data.map(country => ({
-          name: country.name.common,
-          code: country.cca2
+        countries.value = countryList.map(country => ({
+          name: country.name,
+          code: country.code
         })).sort((a, b) => a.name.localeCompare(b.name));
       } catch (error) {
         console.error('Error fetching countries:', error);
