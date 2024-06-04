@@ -1560,13 +1560,6 @@
   resolved "https://registry.yarnpkg.com/@open-draft/until/-/until-1.0.3.tgz#db9cc719191a62e7d9200f6e7bab21c5b848adca"
   integrity sha512-Aq58f5HiWdyDlFffbbSjAlv596h/cOnt2DO1w3DOC7OJ5EHs0hd/nycJfiu9RJbT6Yk6F1knnRRXNSpxoIVZ9Q==
 
-"@paydock-commercetools/paydock@2.0.76":
-  version "2.0.76"
-  resolved "https://registry.yarnpkg.com/@paydock-commercetools/paydock/-/paydock-2.0.76.tgz#918e18428bdb36b957c30a1cb02f01c385e1606e"
-  integrity sha512-LM4y+Xr7olyAOo4PAPCWQIAmJYyeV9RtpYlBeICWA3VY8QQwvkudBtKFeV7p35wn8LhNI0O9zYPLGk6UyYoTUg==
-  dependencies:
-    copyfiles "^2.4.1"
-
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -1577,10 +1570,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.25.tgz#f077fdc0b5d0078d30893396ff4827a13f99e817"
   integrity sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==
 
-"@power-board-commercetools/powerboard@2.0.76":
-  version "2.0.76"
-  resolved "https://registry.yarnpkg.com/@power-board-commercetools/powerboard/-/powerboard-2.0.76.tgz#dd00f46d2c9488775bf1739559972dfa9aa00559"
-  integrity sha512-NeMHNPnjXKcYOC7hydljAn1iPWCggaQzj6vUqE47mbaG3CfPXf9a4DlbJdcoS6ktqGMBUgH/7J5HniBfMfdQ1w==
+"@power-board-commercetools/powerboard@2.0.78":
+  version "2.0.78"
+  resolved "https://registry.yarnpkg.com/@power-board-commercetools/powerboard/-/powerboard-2.0.78.tgz#f38f4c499229d7db66d64f85860d6aebd0a0b89d"
+  integrity sha512-fP/rifA0Augh6LKnYGD1Ln6Ycjv+9N4MOKLveB1j8B7NsAce3dIs1sm8K2M88+e0u1NH25F+sTobjBhurxtd9w==
   dependencies:
     copyfiles "^2.4.1"
 
