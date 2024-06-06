@@ -87,6 +87,7 @@ export default {
 
         //@todo: what happened to the payment method passed to this?
         const placeOrder = () => {
+            console.log('placeOrder');
             if (!validBillingForm.value && (afterpayParams.afterpay !== 'true' || afterpayParams.success !== 'true')) {
                 showError.value = true;
                 return Promise.resolve();
