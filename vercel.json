@@ -1,7 +1,7 @@
 {
   "version": 2,
   "public": true,
-  "alias": "sunrise-commercetools",
+  "alias": "powerboard-sunrise",
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
   ],
