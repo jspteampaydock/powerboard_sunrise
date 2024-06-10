@@ -135,7 +135,7 @@ export default {
                             key: "powerboard-components-payment-type"
                         },
                         fields: {
-                            commercetoolsProjectKey: config.ct.auth.projectKey,
+                            CommercetoolsProjectKey: config.ct.auth.projectKey,
                             PaymentExtensionRequest: JSON.stringify({action:"getPaymentMethodsRequest",request: getPaymentMethodsRequest})
                         }
                     },
