@@ -3,6 +3,7 @@ import BasePrice from 'presentation/components/BasePrice/BasePrice.vue';
 import AddToCartForm from './AddToCartForm/AddToCartForm.vue';
 import DetailsSection from './DetailsSection/DetailsSection.vue';
 import ProductGallery from './ProductGallery/ProductGallery.vue';
+import ProductInventory from './ProductInventory/ProductInventory.vue';
 
 export default {
   name: 'ProductInfo',
@@ -35,6 +36,7 @@ export default {
     ProductGallery,
     // SocialMediaLinks,
     AddToCartForm,
+    ProductInventory,
     BasePrice,
     VariantSelector,
   },
