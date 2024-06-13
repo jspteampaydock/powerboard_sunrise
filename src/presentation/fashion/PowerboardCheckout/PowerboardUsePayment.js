@@ -320,7 +320,7 @@ export function usePowerboardPayment() {
                 }
             }
         ];
-        if (currentCart.lineItems) {
+        /*if (currentCart.lineItems) {
             currentCart.lineItems.forEach((lineItem) => {
                 updateCardActions.push(
                     {
@@ -330,7 +330,7 @@ export function usePowerboardPayment() {
                     }
                 );
             });
-        }
+        }*/
 
         response = await fetchWithToken(`${config.ct.api}/${config.ct.auth.projectKey}/carts/${cartId}`, {
             method: 'POST',
