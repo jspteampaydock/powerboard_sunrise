@@ -20,13 +20,14 @@
         <h3>
           <BasePrice :price="currentVariant.scopedPrice" />
         </h3>
-        <ProductInventory
-            :sku="sku"
-        />
         <VariantSelector
           :sku="sku"
           :allVariants="allVariants"
         />
+        <!-- @todo: calculate in stock -->
+        <!-- <div v-if="availableQ">
+          {{ t('available') }}: {{ availableQuantity }}
+        </div> -->
         <AddToCartForm
           :sku="sku"
           :isOnStock="true"

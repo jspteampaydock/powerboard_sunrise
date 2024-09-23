@@ -12,12 +12,12 @@ const config = {
   ct: {
     auth: {
       host: 'https://auth.europe-west1.gcp.commercetools.com',
-      projectKey: 'powerboard',
+      projectKey: 'dev-powerboard',
       credentials: {
-        clientId: 'AxTwwzLy_RYWlKgEHxNQ4TYE',
-        clientSecret: '63gKIvx287CtVM_9yAnBlW7bLywyQHca',
+        clientId: 'q8PSVqFt1QCSwom_cXcR2Afz',
+        clientSecret: 'wqnry5_uTd_YJpktxeW6LC6Sb5YhvZx3',
       },
-      scope: 'view_messages:powerboard manage_sessions:powerboard manage_customers:powerboard:powerboard manage_business_units:powerboard manage_attribute_groups:powerboard manage_checkout_payment_intents:powerboard manage_categories:powerboard manage_connectors_deployments:powerboard manage_import_containers:powerboard manage_audit_log:powerboard manage_my_shopping_lists:powerboard:powerboard manage_associate_roles:powerboard manage_discount_codes:powerboard manage_orders:powerboard:powerboard manage_customers:powerboard manage_products:powerboard view_orders:powerboard manage_payments:powerboard manage_connectors:powerboard view_audit_log:powerboard manage_product_selections:powerboard manage_cart_discounts:powerboard manage_cart_discounts:powerboard:powerboard manage_project:powerboard manage_order_edits:powerboard manage_extensions:powerboard manage_customer_groups:powerboard manage_my_profile:powerboard:powerboard manage_shopping_lists:powerboard:powerboard manage_orders:powerboard manage_my_orders:powerboard:powerboard'
+      scope: 'create_anonymous_token:dev-powerboard manage_approval_rules:dev-powerboard manage_order_edits:dev-powerboard manage_product_selections:dev-powerboard manage_customer_groups:dev-powerboard manage_project:dev-powerboard view_products:dev-powerboard manage_my_profile:dev-powerboard manage_products:dev-powerboard manage_import_containers:dev-powerboard manage_customers:dev-powerboard manage_payments:dev-powerboard manage_orders:dev-powerboard manage_api_clients:dev-powerboard manage_my_quotes:dev-powerboard manage_associate_roles:dev-powerboard manage_my_shopping_lists:dev-powerboard view_audit_log:dev-powerboard manage_connectors:dev-powerboard manage_my_quote_requests:dev-powerboard view_quote_requests:dev-powerboard introspect_oauth_tokens:dev-powerboard manage_discount_codes:dev-powerboard manage_cart_discounts:dev-powerboard manage_audit_log:dev-powerboard manage_my_payments:dev-powerboard manage_sessions:dev-powerboard manage_business_units:dev-powerboard manage_my_business_units:dev-powerboard manage_approval_flows:dev-powerboard manage_attribute_groups:dev-powerboard manage_connectors_deployments:dev-powerboard manage_categories:dev-powerboard view_categories:dev-powerboard view_project_settings:dev-powerboard view_api_clients:dev-powerboard view_messages:dev-powerboard manage_my_orders:dev-powerboard manage_extensions:dev-powerboard manage_checkout_payment_intents:dev-powerboard view_sessions:dev-powerboard'
     },
     api:
         'https://api.europe-west1.gcp.commercetools.com',

@@ -176,16 +176,15 @@ export default {
         }
 
         onMounted(async () => {
-            const PRODUCTION_POWERBOARD_URL = 'https://widget.powerboard.commbank.com.au/sdk/latest/widget.umd.js';
-            const SANDBOX_POWERBOARD_URL = 'https://widget.preproduction.powerboard.commbank.com.au/sdk/latest/widget.umd.js';
             const configuration = await getPowerboardPaymentsConfiguration();
-            const isSandbox = configuration?.sandbox_mode; 
+            const PRODUCTION_POWERBOARD_URL = configuration?.widget_configuration.config.widget_url ?? 'https://widget.commbank.com.au/sdk/latest/widget.umd.js';
+            const SANDBOX_POWERBOARD_URL = configuration?.widget_configuration.config.widget_test_url ?? 'https://widget.preproduction.powerboard.commbank.com.au/sdk/latest/widget.umd.js';
+            const isSandbox = configuration?.sandbox_mode;
             isSandbox === 'Yes' ? await loadPowerboardScript(SANDBOX_POWERBOARD_URL) : await loadPowerboardScript(PRODUCTION_POWERBOARD_URL)
             const { default: PowerboardCommercetoolsWidget } = await import('@power-board-commercetools/powerboard');
             
             const platformName = platform.os.family; 
             const isApple = platformName === 'OS X' || platformName === 'iOS'|| platformName === 'iPadOS';
-
             if (configuration && configuration.payment_methods) {
                 Object.values(configuration.payment_methods).forEach(paymentMethod => {
                     if ((paymentMethod.type === 'apple-pay' && !isApple) || (paymentMethod.type === 'google-pay' && isApple)) return;

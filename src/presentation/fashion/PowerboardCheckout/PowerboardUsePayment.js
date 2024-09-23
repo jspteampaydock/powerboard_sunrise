@@ -262,21 +262,24 @@ export function usePowerboardPayment() {
             actions: [
                 {
                     action: "setCustomField",
-                    name: "makePaymentRequest",
+                    name: "PaymentExtensionRequest",
                     value: JSON.stringify({
-                        orderId: reference,
-                        paymentId: paymentId,
-                        amount: {
-                            currency: currencyCode,
-                            value: centAmount
-                        },
-                        PowerboardTransactionId: paymentSource,
-                        PowerboardPaymentStatus: status,
-                        PowerboardPaymentType: paymentType,
-                        CommerceToolsUserId: commerceToolCustomerId,
-                        SaveCard: saveCard,
-                        VaultToken: vaultToken,
-                        AdditionalInfo: additionalInfo
+                        action: "makePaymentRequest",
+                        request: {
+                            orderId: reference,
+                            paymentId: paymentId,
+                            amount: {
+                                currency: currencyCode,
+                                value: centAmount
+                            },
+                            PowerboardTransactionId: paymentSource,
+                            PowerboardPaymentStatus: status,
+                            PowerboardPaymentType: paymentType,
+                            CommerceToolsUserId: commerceToolCustomerId,
+                            SaveCard: saveCard,
+                            VaultToken: vaultToken,
+                            AdditionalInfo: additionalInfo
+                        }
                     })
                 }
             ]
@@ -311,33 +314,20 @@ export function usePowerboardPayment() {
             headers: headers
         });
         let currentCart = await response.json();
-        let updateCardActions = [
-            {
-                action: "addPayment",
-                payment: {
-                    typeId: "payment",
-                    id: payment.id
-                }
-            }
-        ];
-        if (currentCart.lineItems) {
-            currentCart.lineItems.forEach((lineItem) => {
-                updateCardActions.push(
-                    {
-                        action: "setLineItemInventoryMode",
-                        lineItemId: lineItem.id,
-                        inventoryMode: "TrackOnly"
-                    }
-                );
-            });
-        }
-
         response = await fetchWithToken(`${config.ct.api}/${config.ct.auth.projectKey}/carts/${cartId}`, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify({
                 version: currentCart.version,
-                actions: updateCardActions
+                actions: [
+                    {
+                        action: "addPayment",
+                        payment: {
+                            typeId: "payment",
+                            id: payment.id
+                        }
+                    }
+                ]
             }),
         });
         currentCart = await response.json();
