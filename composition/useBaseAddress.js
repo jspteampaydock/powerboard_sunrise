@@ -9,7 +9,9 @@ function useBaseAddress() {
   });
 
   const countryRequired = (value) => value !== 'Select country...';
-  const validatePhone = (value) => isValidPhoneNumber(value)
+  const validatePhone = (value) => {
+    return value ? isValidPhoneNumber(value) : true
+  }
 
   const rules = {
     firstName: { required, $lazy: true },
