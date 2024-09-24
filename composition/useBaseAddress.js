@@ -1,6 +1,7 @@
 import { ref } from 'vue';
 import { required, email, maxLength, minLength} from '@vuelidate/validators';
 import useVuelidate from '@vuelidate/core';
+import {isValidPhoneNumber} from "libphonenumber-js/mobile";
 
 function useBaseAddress() {
   const form = ref({
@@ -8,6 +9,7 @@ function useBaseAddress() {
   });
 
   const countryRequired = (value) => value !== 'Select country...';
+  const validatePhone = (value) => isValidPhoneNumber(value)
 
   const rules = {
     firstName: { required, $lazy: true },
@@ -16,7 +18,7 @@ function useBaseAddress() {
     additionalStreetInfo: {$lazy: true},
     postalCode: { required, maxLength: maxLength(6), minLength: minLength(4), $lazy: true },
     city: { required, maxLength: maxLength(24), $lazy: true },
-    phone: { customRegex: value => /^\+?[1-9]\d{1,14}$/.test(value)},
+    phone: { validatePhone },
     email: { required, email, $lazy: true },
     country: { required, countryRequired }
   };
