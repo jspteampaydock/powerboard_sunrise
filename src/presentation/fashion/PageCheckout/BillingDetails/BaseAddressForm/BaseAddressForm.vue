@@ -176,7 +176,6 @@
       <div class="billing-info">
         <label>
           {{ t('phone') }}
-          <abbr class="required" title="required">*</abbr>
         </label>
         <input
           v-model="v.phone.$model"
