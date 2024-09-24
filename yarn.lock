@@ -1738,10 +1738,8 @@
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.25.tgz"
   integrity sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==
 
-"@power-board-commercetools/powerboard@^2.0.93":
-  version "2.0.93"
-  resolved "https://registry.npmjs.org/@power-board-commercetools/powerboard/-/powerboard-2.0.93.tgz"
-  integrity sha512-wYBIl0Fuysk12AzwGxghQPkver8FIAAcBW6/jjQ9Odbn5o6N5MRclnhGchZmrR7Evt1ijiC1v+nX6jfdgDDwuw==
+"@power-board-commercetools/powerboard@^2.0.94":
+  version "2.0.94"
   dependencies:
     copyfiles "^2.4.1"
 
